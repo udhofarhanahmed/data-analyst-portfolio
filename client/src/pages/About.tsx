@@ -10,7 +10,7 @@ export default function About() {
         <div className="container">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">About Me</h1>
           <p className="text-xl text-slate-300 max-w-2xl">
-            Data analyst passionate about turning data into actionable insights that drive business growth.
+            Finance Graduate | Aspiring Data Analyst | Building data solutions and AI tools from Sindh, Pakistan
           </p>
         </div>
       </section>
@@ -30,11 +30,11 @@ export default function About() {
               <div className="bg-slate-50 p-6 rounded-lg border border-slate-200">
                 <h4 className="font-bold text-slate-900 mb-4">Quick Facts</h4>
                 <ul className="space-y-3 text-slate-700 text-sm">
-                  <li><strong>Location:</strong> Pakistan</li>
-                  <li><strong>Experience:</strong> 3+ years</li>
-                  <li><strong>Specialization:</strong> Sales & Customer Analytics</li>
-                  <li><strong>Languages:</strong> Urdu, English</li>
-                  <li><strong>Availability:</strong> Freelance & Full-time</li>
+                  <li><strong>Location:</strong> Sindh, Pakistan</li>
+                  <li><strong>Background:</strong> Finance Graduate</li>
+                  <li><strong>Specialization:</strong> Financial Analytics, AI/ML</li>
+                  <li><strong>Certifications:</strong> Google Data Analytics</li>
+                  <li><strong>Availability:</strong> Freelance & Projects</li>
                 </ul>
               </div>
             </div>
@@ -42,22 +42,22 @@ export default function About() {
             {/* Main Content */}
             <div className="md:col-span-2 space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-4">Professional Journey</h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-4">My Journey</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  I started my career in business operations, where I quickly realized the power of data-driven decision making. What began as analyzing spreadsheets evolved into a passion for uncovering insights that drive real business outcomes.
+                  I'm Farhan Ahmed, a Finance graduate from Sindh, Pakistan, passionate about transforming data into actionable insights. My journey into data analytics began with a desire to understand how data drives business decisions and creates real impact.
                 </p>
                 <p className="text-slate-700 leading-relaxed">
-                  Over the past 3+ years, I've worked with companies across e-commerce, SaaS, and financial services to analyze customer behavior, optimize operations, and drive revenue growth. My approach combines technical rigor with business acumen to deliver insights that matter.
+                  I've completed the Google Data Analytics Professional Certificate and built several real-world projects including financial dashboards, bike-share analysis, and AI-powered tools. My work combines financial knowledge with technical skills to solve practical business problems.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Data Analytics?</h2>
+                <h2 className="text-3xl font-bold text-slate-900 mb-4">My Expertise</h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  I believe that data is the most honest source of truth in business. While opinions and intuition have their place, data tells the real story about what's working and what isn't. My mission is to help businesses listen to their data and make smarter decisions.
+                  I specialize in financial analytics, data visualization, and building intelligent systems using Python, R, and TypeScript. My background in finance gives me unique insight into business metrics and financial decision-making.
                 </p>
                 <p className="text-slate-700 leading-relaxed">
-                  What excites me most is the moment when a complex dataset suddenly reveals a clear pattern or insight that changes how a business operates. That's where the real impact happens.
+                  I'm particularly interested in AI/ML applications, building practical data solutions, and exploring how technology can solve real-world business problems. I'm always learning and staying current with the latest tools and techniques in data analytics.
                 </p>
               </div>
 
@@ -136,17 +136,12 @@ export default function About() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a href="mailto:hello@example.com" className="inline-flex">
+            <a href="https://www.linkedin.com/in/farhan-ahmed-5511a3176" target="_blank" rel="noopener noreferrer" className="inline-flex">
               <Button size="lg" className="bg-teal-500 hover:bg-teal-600 text-white">
-                <Mail className="mr-2 h-4 w-4" /> Email Me
-              </Button>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="inline-flex">
-              <Button size="lg" variant="outline" className="border-slate-300">
                 <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
               </Button>
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="inline-flex">
+            <a href="https://github.com/udhofarhanahmed" target="_blank" rel="noopener noreferrer" className="inline-flex">
               <Button size="lg" variant="outline" className="border-slate-300">
                 <Github className="mr-2 h-4 w-4" /> GitHub
               </Button>

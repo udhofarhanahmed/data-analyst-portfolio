@@ -5,51 +5,58 @@ import { Link } from "wouter";
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Languages & Databases",
-      icon: Database,
+      title: "Programming Languages",
+      icon: Code2,
       skills: [
-        { name: "Python", proficiency: "Expert", description: "Data analysis, automation, machine learning" },
-        { name: "SQL", proficiency: "Expert", description: "Query optimization, complex joins, database design" },
-        { name: "R", proficiency: "Advanced", description: "Statistical analysis, data visualization" },
-        { name: "JavaScript", proficiency: "Intermediate", description: "Web scraping, interactive dashboards" },
+        { name: "Python", proficiency: "Advanced", description: "Data analysis, automation, machine learning, dashboards" },
+        { name: "R", proficiency: "Advanced", description: "Statistical analysis, data visualization, capstone projects" },
+        { name: "TypeScript", proficiency: "Intermediate", description: "Backend development, financial systems" },
+        { name: "JavaScript/HTML/CSS", proficiency: "Advanced", description: "Web development, responsive design" },
+      ],
+    },
+    {
+      title: "Data Analysis & Tools",
+      icon: BarChart3,
+      skills: [
+        { name: "Data Cleaning", proficiency: "Expert", description: "Handling missing values, duplicates, outliers" },
+        { name: "Statistical Analysis", proficiency: "Advanced", description: "Hypothesis testing, distributions, regression" },
+        { name: "Data Visualization", proficiency: "Advanced", description: "Charts, dashboards, interactive visualizations" },
+        { name: "Google Analytics", proficiency: "Advanced", description: "Web analytics, conversion tracking, insights" },
+      ],
+    },
+    {
+      title: "Financial Analytics & AI/ML",
+      icon: Zap,
+      skills: [
+        { name: "Financial Analytics", proficiency: "Expert", description: "Financial dashboards, KPI tracking, metrics analysis" },
+        { name: "Machine Learning", proficiency: "Intermediate", description: "Clustering, classification, pattern recognition" },
+        { name: "AI Tools", proficiency: "Intermediate", description: "AI-powered solutions, consistency checking" },
+        { name: "Predictive Analytics", proficiency: "Intermediate", description: "Forecasting, trend analysis, insights" },
       ],
     },
     {
       title: "Tools & Platforms",
-      icon: BarChart3,
+      icon: Database,
       skills: [
-        { name: "Tableau", proficiency: "Expert", description: "Interactive dashboards, data storytelling" },
-        { name: "Power BI", proficiency: "Advanced", description: "KPI dashboards, DAX formulas" },
-        { name: "Excel", proficiency: "Expert", description: "Advanced formulas, pivot tables, VBA" },
-        { name: "Google Analytics", proficiency: "Advanced", description: "Web analytics, conversion tracking" },
-      ],
-    },
-    {
-      title: "Methodologies & Techniques",
-      icon: Zap,
-      skills: [
-        { name: "Statistical Analysis", proficiency: "Expert", description: "Hypothesis testing, regression, distributions" },
-        { name: "A/B Testing", proficiency: "Advanced", description: "Experimental design, significance testing" },
-        { name: "Machine Learning", proficiency: "Advanced", description: "Clustering, classification, forecasting" },
-        { name: "Data Visualization", proficiency: "Expert", description: "Storytelling with data, dashboard design" },
-      ],
-    },
-    {
-      title: "Additional Skills",
-      icon: Code2,
-      skills: [
-        { name: "Web Scraping", proficiency: "Advanced", description: "BeautifulSoup, Selenium, data collection" },
-        { name: "Git & GitHub", proficiency: "Advanced", description: "Version control, collaboration" },
-        { name: "Data Cleaning", proficiency: "Expert", description: "Handling missing data, outliers, duplicates" },
-        { name: "Forecasting", proficiency: "Advanced", description: "Time series, ARIMA, seasonal analysis" },
+        { name: "GitHub", proficiency: "Advanced", description: "Version control, collaboration, code management" },
+        { name: "Jupyter Notebook", proficiency: "Advanced", description: "Interactive analysis, code documentation" },
+        { name: "Google Workspace", proficiency: "Advanced", description: "Sheets, Docs, Forms, Drive, Analytics" },
+        { name: "Web Development", proficiency: "Intermediate", description: "React, full-stack, responsive design" },
       ],
     },
   ];
 
   const certifications = [
-    { name: "Google Analytics Certification", issuer: "Google", year: "2024" },
-    { name: "Data Analysis with Python", issuer: "Coursera", year: "2023" },
-    { name: "SQL for Data Analysis", issuer: "DataCamp", year: "2023" },
+    { name: "Google Data Analytics Professional Certificate", issuer: "Google", year: "2024" },
+    { name: "Capstone Project: Cyclistic Bike-Share Analysis", issuer: "Google", year: "2024" },
+    { name: "Finance Graduate", issuer: "University", year: "2023" },
+  ];
+
+  const tools = [
+    "Python", "R", "TypeScript", "JavaScript", "HTML", "CSS",
+    "Jupyter Notebook", "GitHub", "Google Analytics", "Google Sheets",
+    "React", "Data Visualization", "Machine Learning", "Statistical Analysis",
+    "Financial Analytics", "Dashboard Development", "Web Development", "Git"
   ];
 
   return (
@@ -59,7 +66,7 @@ export default function Skills() {
         <div className="container">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Skills & Expertise</h1>
           <p className="text-xl text-slate-300 max-w-2xl">
-            A comprehensive overview of technical skills, tools, and methodologies I use to deliver data-driven insights.
+            Technical proficiency in data analysis, financial analytics, AI/ML, and full-stack web development.
           </p>
         </div>
       </section>
@@ -107,7 +114,7 @@ export default function Skills() {
               <div className="text-4xl font-bold text-teal-600 mb-4">⭐⭐⭐</div>
               <h3 className="text-lg font-bold text-slate-900 mb-3">Expert</h3>
               <p className="text-slate-600">
-                Deep expertise with years of practical experience. Can solve complex problems independently and mentor others.
+                Deep expertise with years of practical experience. Can solve complex problems independently.
               </p>
             </div>
 
@@ -115,7 +122,7 @@ export default function Skills() {
               <div className="text-4xl font-bold text-amber-600 mb-4">⭐⭐</div>
               <h3 className="text-lg font-bold text-slate-900 mb-3">Advanced</h3>
               <p className="text-slate-600">
-                Strong working knowledge with ability to handle most scenarios. Can learn new aspects quickly.
+                Strong working knowledge with ability to handle most scenarios independently.
               </p>
             </div>
 
@@ -123,7 +130,7 @@ export default function Skills() {
               <div className="text-4xl font-bold text-blue-600 mb-4">⭐</div>
               <h3 className="text-lg font-bold text-slate-900 mb-3">Intermediate</h3>
               <p className="text-slate-600">
-                Solid understanding with ability to work independently on standard tasks and projects.
+                Solid understanding with ability to work independently on standard tasks.
               </p>
             </div>
           </div>
@@ -149,7 +156,7 @@ export default function Skills() {
 
           <div className="text-center mt-12">
             <p className="text-slate-600 mb-6">
-              Continuously learning and staying updated with latest tools, techniques, and industry trends.
+              Continuously learning and staying updated with latest tools, techniques, and industry trends in data analytics and AI.
             </p>
           </div>
         </div>
@@ -158,15 +165,10 @@ export default function Skills() {
       {/* Tools I Use */}
       <section className="py-20 md:py-32 bg-slate-50 border-t border-slate-200">
         <div className="container">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Tools & Technologies</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Technologies & Tools</h2>
 
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {[
-              "Python", "SQL", "Tableau", "Power BI",
-              "Excel", "R", "Git", "Jupyter",
-              "Google Analytics", "Google Sheets", "Pandas", "NumPy",
-              "Scikit-learn", "Matplotlib", "Plotly", "VS Code"
-            ].map((tool) => (
+            {tools.map((tool) => (
               <div key={tool} className="bg-white p-6 rounded-lg border border-slate-200 text-center hover:shadow-md transition-shadow">
                 <p className="font-semibold text-slate-900">{tool}</p>
               </div>
@@ -180,7 +182,7 @@ export default function Skills() {
         <div className="container text-center">
           <h2 className="text-4xl font-bold mb-6">Let's Put These Skills to Work</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Whether you need analysis, dashboards, or insights, I'm ready to help your business grow.
+            Whether you need data analysis, financial dashboards, or AI solutions, I'm ready to help.
           </p>
           <Link href="/contact">
             <Button size="lg" className="bg-teal-500 hover:bg-teal-600 text-white">

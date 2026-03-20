@@ -1,0 +1,116 @@
+{
+  "resources": [
+    {
+      "id": 1,
+      "title": "Quick Start Guide",
+      "description": "5-minute overview to get started immediately with the system",
+      "category": "Getting Started",
+      "icon": "🚀",
+      "fileName": "README_DATA_ANALYST_SYSTEM.md",
+      "size": "~50 KB",
+      "downloadUrl": "https://example.com/downloads/README_DATA_ANALYST_SYSTEM.md"
+    },
+    {
+      "id": 2,
+      "title": "Complete System Architecture",
+      "description": "Full documentation of all 7 components, integrations, workflows, and technical details (14,000+ words)",
+      "category": "Core Documentation",
+      "icon": "📐",
+      "fileName": "DATA_ANALYST_AGENT_SYSTEM.md",
+      "size": "~200 KB",
+      "downloadUrl": "https://example.com/downloads/DATA_ANALYST_AGENT_SYSTEM.md"
+    },
+    {
+      "id": 3,
+      "title": "Tracker Setup Guide",
+      "description": "Step-by-step instructions for creating and configuring all Google Sheets trackers with formulas and automation",
+      "category": "Setup",
+      "icon": "📊",
+      "fileName": "TRACKER_SETUP_GUIDE.md",
+      "size": "~150 KB",
+      "downloadUrl": "https://example.com/downloads/TRACKER_SETUP_GUIDE.md"
+    },
+    {
+      "id": 4,
+      "title": "Outreach Templates",
+      "description": "10+ ready-to-use email and message templates for cold outreach, follow-ups, proposals, and job applications",
+      "category": "Templates",
+      "icon": "✉️",
+      "fileName": "OUTREACH_TEMPLATES.md",
+      "size": "~100 KB",
+      "downloadUrl": "https://example.com/downloads/OUTREACH_TEMPLATES.md"
+    },
+    {
+      "id": 5,
+      "title": "30-Day Execution Plan",
+      "description": "Daily action checklist with specific tasks, weekly targets, success metrics, and troubleshooting guide",
+      "category": "Execution",
+      "icon": "📅",
+      "fileName": "30_DAY_EXECUTION_PLAN.md",
+      "size": "~180 KB",
+      "downloadUrl": "https://example.com/downloads/30_DAY_EXECUTION_PLAN.md"
+    },
+    {
+      "id": 6,
+      "title": "Implementation Checklist",
+      "description": "Phase-by-phase setup guide with success tracking, troubleshooting, and monthly reflection templates",
+      "category": "Setup",
+      "icon": "✅",
+      "fileName": "IMPLEMENTATION_CHECKLIST.md",
+      "size": "~120 KB",
+      "downloadUrl": "https://example.com/downloads/IMPLEMENTATION_CHECKLIST.md"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Google Workspace",
+      "uses": ["Sheets", "Forms", "Drive", "Gmail", "Calendar", "Analytics"],
+      "icon": "🔵",
+      "url": "https://workspace.google.com"
+    },
+    {
+      "name": "GitHub",
+      "uses": ["Version Control", "Code Hosting", "Collaboration"],
+      "icon": "⚫",
+      "url": "https://github.com"
+    },
+    {
+      "name": "Netlify",
+      "uses": ["Web Deployment", "CI/CD", "Hosting"],
+      "icon": "🟢",
+      "url": "https://netlify.com"
+    },
+    {
+      "name": "Zapier",
+      "uses": ["Workflow Automation", "Service Integration", "Email Triggers"],
+      "icon": "🟠",
+      "url": "https://zapier.com"
+    }
+  ],
+  "metrics": {
+    "thirtyDayGoals": {
+      "jobApplications": "35-40",
+      "outreachMessages": "12-15",
+      "linkedinPosts": "12",
+      "meetingsScheduled": "2-3",
+      "proposalsSent": "1-2",
+      "portfolioProjects": "1"
+    },
+    "successIndicators": {
+      "week1": [
+        "All systems operational",
+        "Portfolio website live",
+        "First 5 applications submitted",
+        "First 2 outreach messages sent",
+        "First 3 posts published"
+      ],
+      "week4": [
+        "40+ applications sent",
+        "15+ outreach messages",
+        "12 posts published",
+        "2-3 meetings held",
+        "1-2 proposals sent"
+      ]
+    }
+  }
+}

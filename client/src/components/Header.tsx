@@ -11,6 +11,8 @@ export default function Header() {
     { label: "Portfolio", href: "/portfolio" },
     { label: "Case Studies", href: "/case-studies" },
     { label: "Skills", href: "/skills" },
+    { label: "System", href: "/system" },
+    { label: "Resources", href: "/resources" },
     { label: "About", href: "/about" },
   ];
 
