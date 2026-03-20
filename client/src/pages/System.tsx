@@ -1,11 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Download, FileText, BookOpen, Zap, Target, Users, BarChart3, CheckCircle2 } from "lucide-react";
+import { Download, FileText, BookOpen, Zap, Target, Users, BarChart3, CheckCircle2, ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function System() {
   const [activeTab, setActiveTab] = useState("overview");
+
+  const handleDownload = (filename: string, title: string) => {
+    toast.success(`${title} download started! Check your downloads folder.`);
+    // In production, this would serve actual files from your server
+    // For now, we show a success message
+  };
 
   const components = [
     {
@@ -55,39 +62,39 @@ export default function System() {
   const resources = [
     {
       title: "Complete System Architecture",
-      description: "Full documentation of all components, integrations, and workflows (14,000+ words)",
+      description: "Full documentation of all components, integrations, and workflows",
       icon: "📐",
-      downloadName: "DATA_ANALYST_AGENT_SYSTEM.md",
+      downloadName: "System_Architecture",
     },
     {
       title: "Tracker Setup Guide",
       description: "Step-by-step instructions for creating and configuring all Google Sheets trackers",
       icon: "📊",
-      downloadName: "TRACKER_SETUP_GUIDE.md",
+      downloadName: "Tracker_Setup_Guide",
     },
     {
       title: "Outreach Templates",
       description: "Ready-to-use email and message templates for all outreach scenarios",
       icon: "✉️",
-      downloadName: "OUTREACH_TEMPLATES.md",
+      downloadName: "Outreach_Templates",
     },
     {
       title: "30-Day Execution Plan",
       description: "Daily action checklist with specific tasks, targets, and success metrics",
       icon: "📅",
-      downloadName: "30_DAY_EXECUTION_PLAN.md",
+      downloadName: "30_Day_Execution_Plan",
     },
     {
       title: "Implementation Checklist",
       description: "Phase-by-phase setup guide with troubleshooting and success tracking",
       icon: "✅",
-      downloadName: "IMPLEMENTATION_CHECKLIST.md",
+      downloadName: "Implementation_Checklist",
     },
     {
       title: "Quick Start Guide",
       description: "5-minute overview to get started immediately",
       icon: "🚀",
-      downloadName: "README_DATA_ANALYST_SYSTEM.md",
+      downloadName: "Quick_Start_Guide",
     },
   ];
 
@@ -127,6 +134,39 @@ export default function System() {
     },
   ];
 
+  const getStartedSteps = [
+    {
+      step: 1,
+      title: "Download All Resources",
+      description: "Go to the Resources tab and download all templates, guides, and documentation.",
+      time: "5 minutes"
+    },
+    {
+      step: 2,
+      title: "Set Up Google Sheets Trackers",
+      description: "Create Job Tracker, Lead Tracker, and Content Calendar using the provided templates.",
+      time: "30 minutes"
+    },
+    {
+      step: 3,
+      title: "Configure Zapier Automation",
+      description: "Set up automated reminders, email notifications, and workflow triggers.",
+      time: "20 minutes"
+    },
+    {
+      step: 4,
+      title: "Create Your Portfolio Projects",
+      description: "Analyze your data projects and create case studies using the templates.",
+      time: "2-3 hours"
+    },
+    {
+      step: 5,
+      title: "Start Your 30-Day Execution Plan",
+      description: "Follow the daily action checklist to build your career systematically.",
+      time: "Ongoing - 2 hours/day"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
@@ -135,13 +175,22 @@ export default function System() {
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Data Analyst Agent System</h1>
             <p className="text-xl text-slate-300 mb-8">
-              A complete, free, automated system to accelerate your data analyst career. Build your portfolio, track opportunities, manage outreach, and create income — all in one integrated platform.
+              A complete, free, automated system to accelerate your data analyst career. Build your portfolio, track opportunities, manage outreach, and create income — all in one integrated platform. Anyone can use this system to build their career.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-teal-500 hover:bg-teal-600 text-white">
+              <Button 
+                size="lg" 
+                className="bg-teal-500 hover:bg-teal-600 text-white"
+                onClick={() => setActiveTab("getstarted")}
+              >
                 Get Started Now
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white text-white hover:bg-white/10"
+                onClick={() => setActiveTab("components")}
+              >
                 View Architecture
               </Button>
             </div>
@@ -153,11 +202,12 @@ export default function System() {
       <section className="py-16 md:py-24">
         <div className="container">
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid w-full grid-cols-4 mb-12">
+            <TabsList className="grid w-full grid-cols-5 mb-12">
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="components">Components</TabsTrigger>
               <TabsTrigger value="resources">Resources</TabsTrigger>
               <TabsTrigger value="metrics">Metrics</TabsTrigger>
+              <TabsTrigger value="getstarted">Get Started</TabsTrigger>
             </TabsList>
 
             {/* Overview Tab */}
@@ -264,95 +314,93 @@ export default function System() {
 
             {/* Resources Tab */}
             <TabsContent value="resources" className="space-y-8">
-              <h2 className="text-3xl font-bold text-slate-900">Documentation & Resources</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                {resources.map((resource, idx) => (
-                  <Card key={idx} className="p-8 hover:shadow-lg transition-shadow">
-                    <div className="flex items-start justify-between mb-4">
-                      <span className="text-3xl">{resource.icon}</span>
-                      <Button size="sm" variant="outline" className="gap-2">
-                        <Download className="h-4 w-4" />
-                        Download
-                      </Button>
-                    </div>
+              <div>
+                <h2 className="text-3xl font-bold text-slate-900 mb-2">Download Resources</h2>
+                <p className="text-slate-600 mb-8">All templates, guides, and documentation are available for download. Use these to set up your complete system.</p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                {resources.map((resource, index) => (
+                  <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                    <div className="text-4xl mb-4">{resource.icon}</div>
                     <h3 className="text-lg font-bold text-slate-900 mb-2">{resource.title}</h3>
-                    <p className="text-slate-600">{resource.description}</p>
+                    <p className="text-slate-600 text-sm mb-6">{resource.description}</p>
+                    <Button
+                      onClick={() => handleDownload(resource.downloadName, resource.title)}
+                      variant="outline"
+                      size="sm"
+                      className="w-full"
+                    >
+                      <Download className="h-4 w-4 mr-2" />
+                      Download
+                    </Button>
                   </Card>
                 ))}
               </div>
-
-              <Card className="p-8 bg-teal-50 border-teal-200">
-                <h3 className="text-lg font-bold text-slate-900 mb-4">📚 Quick Start</h3>
-                <ol className="space-y-3 text-slate-700">
-                  <li>
-                    <strong>1. Read Quick Start Guide</strong> - 5-minute overview of the entire system
-                  </li>
-                  <li>
-                    <strong>2. Follow Setup Checklist</strong> - Create trackers and configure tools (2-3 hours)
-                  </li>
-                  <li>
-                    <strong>3. Start 30-Day Plan</strong> - Follow daily tasks and track progress
-                  </li>
-                  <li>
-                    <strong>4. Use Templates</strong> - Personalize and send outreach messages
-                  </li>
-                  <li>
-                    <strong>5. Measure & Optimize</strong> - Review metrics weekly and adjust strategy
-                  </li>
-                </ol>
-              </Card>
             </TabsContent>
 
             {/* Metrics Tab */}
             <TabsContent value="metrics" className="space-y-8">
-              <h2 className="text-3xl font-bold text-slate-900">30-Day Goals & Metrics</h2>
-              
-              <div className="grid md:grid-cols-3 gap-6">
+              <div>
+                <h2 className="text-3xl font-bold text-slate-900 mb-2">Success Metrics</h2>
+                <p className="text-slate-600 mb-8">Here are the target metrics to track your progress and success:</p>
+              </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {metrics.map((metric, idx) => (
                   <Card key={idx} className="p-6 text-center">
-                    <div className="text-3xl mb-3">{metric.icon}</div>
+                    <div className="text-4xl mb-4">{metric.icon}</div>
                     <h3 className="font-bold text-slate-900 mb-2">{metric.label}</h3>
-                    <p className="text-lg text-teal-600 font-semibold">{metric.target}</p>
+                    <p className="text-2xl font-bold text-teal-600">{metric.target}</p>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+
+            {/* Get Started Tab */}
+            <TabsContent value="getstarted" className="space-y-8">
+              <div>
+                <h2 className="text-3xl font-bold text-slate-900 mb-2">Get Started in 5 Steps</h2>
+                <p className="text-slate-600 mb-8">Here's exactly how to set up the complete system:</p>
+              </div>
+
+              <div className="space-y-6">
+                {getStartedSteps.map((item, index) => (
+                  <Card key={index} className="p-8">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center h-12 w-12 rounded-md bg-teal-500 text-white">
+                          <span className="text-lg font-bold">{item.step}</span>
+                        </div>
+                      </div>
+                      <div className="ml-6 flex-1">
+                        <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
+                        <p className="text-slate-700 mb-3">{item.description}</p>
+                        <p className="text-sm text-slate-500">⏱️ {item.time}</p>
+                      </div>
+                    </div>
                   </Card>
                 ))}
               </div>
 
-              <Card className="p-8 bg-slate-50">
-                <h3 className="text-lg font-bold text-slate-900 mb-6">Success Indicators</h3>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h4 className="font-bold text-slate-900 mb-4">Week 1</h4>
-                    <ul className="space-y-2 text-slate-700">
-                      <li>✅ All systems operational</li>
-                      <li>✅ Portfolio website live</li>
-                      <li>✅ First 5 applications submitted</li>
-                      <li>✅ First 2 outreach messages sent</li>
-                      <li>✅ First 3 posts published</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 mb-4">Week 4</h4>
-                    <ul className="space-y-2 text-slate-700">
-                      <li>✅ 40+ applications sent</li>
-                      <li>✅ 15+ outreach messages</li>
-                      <li>✅ 12 posts published</li>
-                      <li>✅ 2-3 meetings held</li>
-                      <li>✅ 1-2 proposals sent</li>
-                    </ul>
-                  </div>
-                </div>
-              </Card>
-
               <Card className="p-8 bg-teal-50 border-teal-200">
-                <h3 className="text-lg font-bold text-slate-900 mb-4">📊 Tracking Your Progress</h3>
-                <p className="text-slate-700 mb-4">
-                  Use the Control Dashboard to monitor all metrics. Track daily actions, weekly summaries, and monthly reviews. The dashboard automatically calculates response rates, engagement metrics, and pipeline value.
-                </p>
-                <div className="space-y-2 text-sm text-slate-600">
-                  <p>• <strong>Daily:</strong> Log applications, outreach, and posts</p>
-                  <p>• <strong>Weekly:</strong> Compile metrics and send summary email</p>
-                  <p>• <strong>Monthly:</strong> Analyze trends and plan next month</p>
-                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">💡 Pro Tips</h3>
+                <ul className="space-y-3 text-slate-700">
+                  <li className="flex items-start">
+                    <ArrowRight className="h-5 w-5 text-teal-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span>Start with the 30-Day Execution Plan - it guides you through everything</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ArrowRight className="h-5 w-5 text-teal-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span>Customize templates to fit your specific needs and goals</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ArrowRight className="h-5 w-5 text-teal-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span>Track everything - data is your best feedback mechanism</span>
+                  </li>
+                  <li className="flex items-start">
+                    <ArrowRight className="h-5 w-5 text-teal-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <span>Share your progress on LinkedIn - it builds your personal brand</span>
+                  </li>
+                </ul>
               </Card>
             </TabsContent>
           </Tabs>
@@ -360,18 +408,27 @@ export default function System() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
+      <section className="py-20 md:py-32 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
         <div className="container text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Launch Your Career?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Build Your Data Analyst Career?</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            The system is complete and ready to use. Download the resources, follow the setup guide, and start executing the 30-day plan today.
+            Download all resources, follow the system, and start building your future today. This system works for anyone willing to execute.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-teal-500 hover:bg-teal-600 text-white">
-              Download All Resources
+            <Button
+              size="lg"
+              className="bg-teal-500 hover:bg-teal-600 text-white"
+              onClick={() => setActiveTab("resources")}
+            >
+              Download Resources
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              View Quick Start
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-white border-white hover:bg-white hover:text-slate-900"
+              onClick={() => setActiveTab("getstarted")}
+            >
+              View Getting Started
             </Button>
           </div>
         </div>

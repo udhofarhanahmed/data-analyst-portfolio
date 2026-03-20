@@ -71,8 +71,8 @@ export default function Contact() {
                   <Mail className="h-5 w-5 text-teal-500 mr-3" />
                   Email
                 </h3>
-                <a href="mailto:hello@example.com" className="text-teal-600 hover:text-teal-700 font-medium">
-                  hello@example.com
+                <a href="mailto:dataanalystfarhan@gmail.com" className="text-teal-600 hover:text-teal-700 font-medium">
+                  dataanalystfarhan@gmail.com
                 </a>
                 <p className="text-slate-600 text-sm mt-2">I typically respond within 24 hours</p>
               </div>
@@ -82,10 +82,10 @@ export default function Contact() {
                   <Phone className="h-5 w-5 text-teal-500 mr-3" />
                   Phone
                 </h3>
-                <a href="tel:+923001234567" className="text-teal-600 hover:text-teal-700 font-medium">
-                  +92 (300) 123-4567
+                <a href="https://wa.me/923032833031" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 font-medium">
+                  +92 303 283 3031 (WhatsApp)
                 </a>
-                <p className="text-slate-600 text-sm mt-2">Available for calls on weekdays</p>
+                <p className="text-slate-600 text-sm mt-2">Quick response via WhatsApp</p>
               </div>
 
               <div>
@@ -100,13 +100,13 @@ export default function Contact() {
               <div className="pt-8 border-t border-slate-200">
                 <h3 className="text-lg font-bold text-slate-900 mb-4">Connect With Me</h3>
                 <div className="flex gap-4">
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-teal-600 transition-colors">
+                  <a href="https://linkedin.com/in/farhan-ahmed-5511a3176" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-teal-600 transition-colors">
                     <Linkedin className="h-6 w-6" />
                   </a>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-teal-600 transition-colors">
+                  <a href="https://github.com/udhofarhanahmed" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-teal-600 transition-colors">
                     <Github className="h-6 w-6" />
                   </a>
-                  <a href="mailto:hello@example.com" className="text-slate-600 hover:text-teal-600 transition-colors">
+                  <a href="mailto:dataanalystfarhan@gmail.com" className="text-slate-600 hover:text-teal-600 transition-colors">
                     <Mail className="h-6 w-6" />
                   </a>
                 </div>
@@ -254,7 +254,7 @@ export default function Contact() {
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             Let's start a conversation about your data challenges and opportunities.
           </p>
-          <a href="mailto:hello@example.com">
+          <a href="mailto:dataanalystfarhan@gmail.com">
             <Button size="lg" className="bg-teal-500 hover:bg-teal-600 text-white">
               Send Me an Email
             </Button>
