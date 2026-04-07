@@ -18,9 +18,9 @@ export default function Footer() {
     {
       title: "Connect",
       links: [
-        { label: "Email", href: "mailto:hello@example.com" },
-        { label: "LinkedIn", href: "https://linkedin.com" },
-        { label: "GitHub", href: "https://github.com" },
+        { label: "Email", href: "mailto:dataanalystfarhan@gmail.com" },
+        { label: "LinkedIn", href: "https://pk.linkedin.com/in/farhan-ahmed-5511a3176" },
+        { label: "GitHub", href: "https://github.com/udhofarhanahmed" },
         { label: "Contact", href: "/contact" },
       ],
     },
@@ -76,7 +76,7 @@ export default function Footer() {
             <h4 className="font-bold text-white mb-4">Follow</h4>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com"
+                href="https://pk.linkedin.com/in/farhan-ahmed-5511a3176"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-teal-400 transition-colors"
@@ -84,7 +84,7 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/udhofarhanahmed"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-teal-400 transition-colors"
@@ -92,7 +92,7 @@ export default function Footer() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="mailto:hello@example.com"
+                href="mailto:dataanalystfarhan@gmail.com"
                 className="text-slate-400 hover:text-teal-400 transition-colors"
               >
                 <Mail className="h-5 w-5" />
@@ -106,7 +106,7 @@ export default function Footer() {
           {/* Bottom Footer */}
           <div className="flex flex-col md:flex-row items-center justify-between">
             <p className="text-sm text-slate-400 flex items-center gap-1">
-              Made with <Heart className="h-4 w-4 text-teal-500" /> by Farhana Ahmed
+              Made with <Heart className="h-4 w-4 text-teal-500" /> by Farhan Ahmed
             </p>
             <p className="text-sm text-slate-400">
               &copy; {currentYear} Data Analyst Portfolio. All rights reserved.
