@@ -1,30 +1,7 @@
-import { Link } from "wouter";
 import { Mail, Linkedin, Github, Heart } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const footerLinks = [
-    {
-      title: "Navigation",
-      links: [
-        { label: "Home", href: "/" },
-        { label: "Portfolio", href: "/portfolio" },
-        { label: "Case Studies", href: "/case-studies" },
-        { label: "Skills", href: "/skills" },
-        { label: "About", href: "/about" },
-      ],
-    },
-    {
-      title: "Connect",
-      links: [
-        { label: "Email", href: "mailto:dataanalystfarhan@gmail.com" },
-        { label: "LinkedIn", href: "https://pk.linkedin.com/in/farhan-ahmed-5511a3176" },
-        { label: "GitHub", href: "https://github.com/udhofarhanahmed" },
-        { label: "Contact", href: "/contact" },
-      ],
-    },
-  ];
 
   return (
     <footer className="bg-slate-900 text-slate-300 border-t border-slate-800">
@@ -42,34 +19,77 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Footer Links */}
-          {footerLinks.map((section) => (
-            <div key={section.title}>
-              <h4 className="font-bold text-white mb-4">{section.title}</h4>
-              <ul className="space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.label}>
-                    {link.href.startsWith("http") || link.href.startsWith("mailto:") ? (
-                      <a
-                        href={link.href}
-                        target={link.href.startsWith("http") ? "_blank" : undefined}
-                        rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
-                      >
-                        {link.label}
-                      </a>
-                    ) : (
-                      <Link href={link.href}>
-                        <a className="text-slate-400 hover:text-teal-400 transition-colors text-sm">
-                          {link.label}
-                        </a>
-                      </Link>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Navigation Links */}
+          <div>
+            <h4 className="font-bold text-white mb-4">Navigation</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="/" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/portfolio" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a href="/case-studies" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">
+                  Case Studies
+                </a>
+              </li>
+              <li>
+                <a href="/skills" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a href="/about" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">
+                  About
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Connect Links */}
+          <div>
+            <h4 className="font-bold text-white mb-4">Connect</h4>
+            <ul className="space-y-3">
+              <li>
+                <a 
+                  href="mailto:dataanalystfarhan@gmail.com" 
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  Email
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://pk.linkedin.com/in/farhan-ahmed-5511a3176" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://github.com/udhofarhanahmed" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
 
           {/* Social Links */}
           <div>
@@ -80,6 +100,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-teal-400 transition-colors"
+                title="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
@@ -88,12 +109,14 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-teal-400 transition-colors"
+                title="GitHub"
               >
                 <Github className="h-5 w-5" />
               </a>
               <a
                 href="mailto:dataanalystfarhan@gmail.com"
                 className="text-slate-400 hover:text-teal-400 transition-colors"
+                title="Email"
               >
                 <Mail className="h-5 w-5" />
               </a>
