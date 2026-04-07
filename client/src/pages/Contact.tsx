@@ -100,7 +100,7 @@ export default function Contact() {
               <div className="pt-8 border-t border-slate-200">
                 <h3 className="text-lg font-bold text-slate-900 mb-4">Connect With Me</h3>
                 <div className="flex gap-4">
-                  <a href="https://linkedin.com/in/farhan-ahmed-5511a3176" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-teal-600 transition-colors">
+                  <a href="https://pk.linkedin.com/in/farhan-ahmed-5511a3176" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-teal-600 transition-colors">
                     <Linkedin className="h-6 w-6" />
                   </a>
                   <a href="https://github.com/udhofarhanahmed" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-teal-600 transition-colors">
