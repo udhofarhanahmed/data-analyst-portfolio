@@ -55,8 +55,7 @@ export default function Home() {
         </div>
         
         <div className="container relative z-10">
-          <div className="grid md:grid-cols-3 gap-12 items-start">
-            <div className="md:col-span-2">
+          <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Farhan Ahmed
             </h1>
@@ -97,13 +96,6 @@ export default function Home() {
               >
                 <Linkedin className="h-6 w-6" />
               </a>
-            </div>
-            </div>
-            {/* LinkedIn Badge */}
-            <div className="hidden md:flex justify-center">
-              <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="farhan-ahmed-5511a3176" data-version="v1">
-                <a className="badge-base__link LI-simple-link" href="https://pk.linkedin.com/in/farhan-ahmed-5511a3176?trk=profile-badge">Farhan Ahmed</a>
-              </div>
             </div>
           </div>
         </div>
