@@ -28,13 +28,8 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Simulate form submission
       await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      // Show success message
       toast.success("Message sent successfully! I'll get back to you soon.");
-
-      // Reset form
       setFormData({
         name: "",
         email: "",
@@ -49,9 +44,9 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Header */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+    <div className="min-h-screen bg-white">
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-16 md:py-24">
         <div className="container">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Get in Touch</h1>
           <p className="text-xl text-slate-300 max-w-2xl">
@@ -61,7 +56,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-12 mb-16">
             {/* Contact Info */}
@@ -93,12 +88,12 @@ export default function Contact() {
                   <MapPin className="h-5 w-5 text-teal-500 mr-3" />
                   Location
                 </h3>
-                <p className="text-slate-700 font-medium">Pakistan</p>
+                <p className="text-slate-700 font-medium">Shikarpur, Sindh, Pakistan</p>
                 <p className="text-slate-600 text-sm mt-2">Available for remote work globally</p>
               </div>
 
               <div className="pt-8 border-t border-slate-200">
-                <h3 className="text-lg font-bold text-slate-900 mb-4">Connect With Me</h3>
+                <h3 className="text-lg font-bold text-slate-900 mb-4">Connect</h3>
                 <div className="flex gap-4">
                   <a href="https://pk.linkedin.com/in/farhan-ahmed-5511a3176" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-teal-600 transition-colors">
                     <Linkedin className="h-6 w-6" />
@@ -197,22 +192,22 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 md:py-32 bg-slate-50 border-t border-slate-200">
+      <section className="py-20 md:py-28 bg-slate-50">
         <div className="container max-w-3xl">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-bold text-slate-900 mb-16 text-center">Frequently Asked Questions</h2>
 
           <div className="space-y-6">
             <div className="bg-white p-8 rounded-lg border border-slate-200">
               <h3 className="text-lg font-bold text-slate-900 mb-3">What types of projects do you work on?</h3>
               <p className="text-slate-700">
-                I specialize in sales analysis, customer segmentation, financial dashboards, and market research. I work with businesses of all sizes, from startups to established companies.
+                I specialize in financial analytics, data dashboards, business intelligence, and AI-powered solutions. I work with businesses of all sizes, from startups to established companies.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-lg border border-slate-200">
               <h3 className="text-lg font-bold text-slate-900 mb-3">What's your typical project timeline?</h3>
               <p className="text-slate-700">
-                Most projects take 2-6 weeks depending on complexity and data availability. I'll provide a detailed timeline during our initial consultation.
+                Most projects take 3–10 days depending on complexity and data availability. I'll provide a detailed timeline during our initial consultation.
               </p>
             </div>
 
@@ -240,7 +235,7 @@ export default function Contact() {
             <div className="bg-white p-8 rounded-lg border border-slate-200">
               <h3 className="text-lg font-bold text-slate-900 mb-3">How do I get started?</h3>
               <p className="text-slate-700">
-                Simply fill out the contact form above or reach out via email/LinkedIn. We'll schedule a brief call to understand your needs and discuss how I can help.
+                Simply fill out the contact form above or reach out via email/WhatsApp/LinkedIn. We'll schedule a brief call to understand your needs and discuss how I can help.
               </p>
             </div>
           </div>
@@ -248,7 +243,7 @@ export default function Contact() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 md:py-32 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
+      <section className="py-20 md:py-28 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
         <div className="container text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Data Into Insights?</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">

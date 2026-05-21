@@ -11,8 +11,7 @@ export default function Header() {
     { label: "Portfolio", href: "/portfolio" },
     { label: "Case Studies", href: "/case-studies" },
     { label: "Skills", href: "/skills" },
-    { label: "System", href: "/system" },
-    { label: "Resources", href: "/resources" },
+    { label: "Services", href: "/services" },
     { label: "About", href: "/about" },
   ];
 
@@ -23,8 +22,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/">
             <div className="flex items-center gap-2 cursor-pointer">
-              <div className="text-2xl font-bold text-teal-600">📊</div>
-              <span className="text-lg font-bold text-slate-900 hidden sm:inline">DataAnalyst</span>
+              <span className="text-lg font-bold text-slate-900">Farhan Ahmed</span>
             </div>
           </Link>
 

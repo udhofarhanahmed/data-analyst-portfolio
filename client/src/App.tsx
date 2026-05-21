@@ -10,8 +10,7 @@ import CaseStudies from "./pages/CaseStudies";
 import Skills from "./pages/Skills";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import System from "./pages/System";
-import Resources from "./pages/Resources";
+import Services from "./pages/Services";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -24,10 +23,9 @@ function Router() {
         <Route path={"/portfolio"} component={Portfolio} />
         <Route path={"/case-studies"} component={CaseStudies} />
         <Route path={"/skills"} component={Skills} />
+        <Route path={"/services"} component={Services} />
         <Route path={"/about"} component={About} />
         <Route path={"/contact"} component={Contact} />
-        <Route path={"/system"} component={System} />
-        <Route path={"/resources"} component={Resources} />
         <Route path={"/404"} component={NotFound} />
         <Route component={NotFound} />
       </Switch>
