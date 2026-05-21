@@ -101,11 +101,8 @@ export default function Home() {
             </div>
             {/* LinkedIn Badge */}
             <div className="hidden md:flex justify-center">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 border border-slate-700">
-                <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-                <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="farhan-ahmed-5511a3176" data-version="v1">
-                  <a className="badge-base__link LI-simple-link" href="https://pk.linkedin.com/in/farhan-ahmed-5511a3176?trk=profile-badge">Farhan Ahmed</a>
-                </div>
+              <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="farhan-ahmed-5511a3176" data-version="v1">
+                <a className="badge-base__link LI-simple-link" href="https://pk.linkedin.com/in/farhan-ahmed-5511a3176?trk=profile-badge">Farhan Ahmed</a>
               </div>
             </div>
           </div>
