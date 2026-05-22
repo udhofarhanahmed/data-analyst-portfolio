@@ -29,44 +29,44 @@ export default function Skills() {
       title: "Google Data Analytics Professional Certificate (v2)",
       issuer: "Coursera/Google",
       date: "Sep 2025",
-      link: "#",
+      link: "https://www.credly.com/users/farhan-ahmed-udho",
     },
     {
       title: "Google Data Analytics Professional Certificate (v3)",
       issuer: "Coursera/Google",
       date: "Apr 2026",
-      link: "#",
+      link: "https://www.credly.com/users/farhan-ahmed-udho",
     },
     {
       title: "SAS AI and Machine Learning Skills Fest",
       issuer: "SAS",
       date: "Nov 2025",
-      link: "#",
+      link: "https://www.credly.com/users/farhan-ahmed-udho",
     },
     {
       title: "Data Analytics & Business Intelligence",
       issuer: "DigiSkills DSTP 3.0, Ministry of IT Pakistan",
       date: "Dec 2025",
-      link: "#",
       credentialId: "ID: H5BNSDYMK",
+      note: "Certificate issued - No public link available from DigiSkills",
     },
     {
       title: "Tata GenAI Powered Data Analytics Job Simulation",
       issuer: "Forage",
       date: "Nov 2025",
-      link: "#",
+      link: "https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_qny48BqLxoe2u6iR9_1763885028460_completion_certificate.pdf",
     },
     {
       title: "Google AI Essentials",
       issuer: "Google",
       date: "2025",
-      link: "#",
+      link: "https://www.coursera.org/account/accomplishments/verify/GUSMCXG2KW0S",
     },
     {
       title: "Discover Data Analysis",
       issuer: "Microsoft Learn",
       date: "2025",
-      link: "#",
+      link: "https://learn.microsoft.com/en-us/users/farhanahmedudho-5461/achievements/qjq53uje",
     },
   ];
 
@@ -121,14 +121,20 @@ export default function Skills() {
                       <p className="text-sm text-slate-500 mt-2">{cert.credentialId}</p>
                     )}
                   </div>
-                  <a
-                    href={cert.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium whitespace-nowrap"
-                  >
-                    Verify <ExternalLink className="h-4 w-4" />
-                  </a>
+                  {cert.link ? (
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium whitespace-nowrap"
+                    >
+                      Verify <ExternalLink className="h-4 w-4" />
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-2 text-slate-500 font-medium whitespace-nowrap">
+                      Certificate Issued
+                    </span>
+                  )}
                 </div>
               </div>
             ))}
